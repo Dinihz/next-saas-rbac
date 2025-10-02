@@ -1,12 +1,12 @@
 import {
   createMongoAbility,
-  CreateAbility,
-  MongoAbility,
+  type CreateAbility,
+  type MongoAbility,
   AbilityBuilder,
 } from '@casl/ability'
 import { z } from 'zod'
 
-import { User } from './models/user'
+import type { User } from './models/user'
 import { permissions } from './permissions'
 import { userSubject } from './subjects/user'
 import { projectSubject } from './subjects/project'
