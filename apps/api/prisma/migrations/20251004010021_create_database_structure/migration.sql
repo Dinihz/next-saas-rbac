@@ -5,7 +5,7 @@ CREATE TYPE "TokenType" AS ENUM ('PASSWORD_RECOVER');
 CREATE TYPE "AccountProvider" AS ENUM ('GITHUB');
 
 -- CreateEnum
-CREATE TYPE "Role" AS ENUM ('ADMIN', 'MUMBER', 'BILLING');
+CREATE TYPE "Role" AS ENUM ('ADMIN', 'MEMBER', 'BILLING');
 
 -- CreateTable
 CREATE TABLE "users" (
@@ -54,7 +54,7 @@ CREATE TABLE "invites" (
 -- CreateTable
 CREATE TABLE "members" (
     "id" TEXT NOT NULL,
-    "role" "Role" NOT NULL DEFAULT 'MUMBER',
+    "role" "Role" NOT NULL DEFAULT 'MEMBER',
     "organization_id" TEXT NOT NULL,
     "user_id" TEXT NOT NULL,
 
